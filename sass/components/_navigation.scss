@@ -1,0 +1,15 @@
+//navigation Bar
+.nav{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo{
+    display: block;
+    height: 100%;
+    width: auto;
+    @include respond(phone-lg){
+      width: 40%;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+//common typography styles
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-neutral-dark);
+  font-size: 1.8rem;
+}
+
+.heading{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.para{
+  font-size: inherit;
+  font-weight: 400;
+  color: inherit;
+  line-height: inherit;
+}
+
+//in header
+.primary-heading{
+  color: var(--color-neutral-dark);
+  font-size: 4.5rem;
+}
+
+
+//stat
+.stat__para{
+  color: darkgrey;
+  font-size: 2.2rem;
+}
+
+.stat__heading{
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-neutral-dark);
+  font-size: 9rem;
+}
+
+//feature and cta
+.secondary-heading{
+  font-size: 3.77rem;
+}
+.feature__para{
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+//footer
+.footer__heading{
+  font-family: inherit;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.footer__para{
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+.footer__info__para,
+.footer__newsletter__para{
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: inherit;
+}

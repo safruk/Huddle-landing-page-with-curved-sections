@@ -1,0 +1,51 @@
+//Header Section
+.header{
+  // margin-top: 14rem;
+  margin: 12rem auto 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: moveInBottom .8s ease-out;
+  // max-width: 100rem;
+
+  //Mockups-Image Section
+  .mockups__image-container{
+    .mockups__img{
+      display: block;
+      width: 95%;
+      max-width: 98rem;
+      background-size: cover;
+      margin: auto;
+
+      @include respond(tab-port){
+        width: 80%;
+      }
+    }
+  }
+
+@include respond(tab-port){
+  max-width: 60rem;
+}
+  & > :not(:last-child){
+    margin: 1.25rem 0; //or gap: 2rem;
+  }
+
+  & > :nth-child(3n){
+    margin: 3rem 0;
+  }
+
+  & > :last-child{
+    margin: 7rem 0;
+  }
+  &__para{
+    max-width: 56rem;
+    width: 100%;
+
+    @include respond(tab-port){
+      max-width: 40rem;
+    }
+
+  }
+}

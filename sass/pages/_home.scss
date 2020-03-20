@@ -1,0 +1,339 @@
+//Statistics-Card Section
+.stat{
+  margin: 1rem 0 4rem;
+  align-self: center;
+  // width: 100rem;
+  // justify-content: space-around;
+  width: 85rem;
+  justify-content: space-between;
+  max-width: 100%;
+  display: flex;
+  // gap: 10rem;
+  flex-wrap: wrap;
+
+  @include respond(tab-port){
+    margin: 10rem 0 5rem;
+    max-width: 40rem;
+    justify-content: center;
+
+    & >:not(:last-child){
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    & > :last-child{
+      align-self: center;
+    }
+  }
+  &__icon{
+   fill: var(--color-primary-dark);
+   height: 3.5rem;
+   //transform: translateX(.5rem);
+  }
+
+}
+
+//Features Section
+.features{
+  display: flex;
+  flex-direction: column;
+
+
+  &--nowave{
+    margin: 10rem 0 3rem;
+  }
+
+  &--wave-1{
+    &::before{
+
+      content: "";
+      background-image: url('../images/bg-section-top-desktop-1.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 100%;
+      height: 165px;
+
+      @include respond(phone-sm){
+          background-image: url('../images/bg-section-top-mobile-1.svg');
+          height: 112px;
+      };
+    }
+
+    &::after{
+      content: "";
+      background-image: url('../images/bg-section-bottom-desktop-1.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 100%;
+      height: 139px;
+      // margin-bottom: 7rem;
+
+      @include respond(phone-sm){
+          background-image: url('../images/bg-section-bottom-mobile-1.svg');
+          height: 52px;
+      };
+    }
+  }
+
+  &--wave-2{
+    &::before{
+
+      content: "";
+      background-image: url('../images/bg-section-top-desktop-2.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 100%;
+      height: 156px;
+      // margin-top: 7rem;
+      @include respond(phone-sm){
+          background-image: url('../images/bg-section-top-mobile-2.svg');
+          height: 103px;
+      };
+    }
+
+    &::after{
+      content: "";
+      background-image: url('../images/bg-section-bottom-desktop-2.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 100%;
+      height: 139px;
+
+      @include respond(phone-sm){
+          background-image: url('../images/bg-section-bottom-mobile-2.svg');
+            height: 101px;
+      };
+    }
+  }
+}
+
+.feature{
+  display: flex;
+  // gap: 12rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 5rem;
+
+  @include respond(tab-port){
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // gap: 4rem;
+    padding: 5rem;
+  }
+  &--bg{
+    background-color: var(--color-neutral-light);
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    // gap: 3rem;
+    padding: 0 7rem;
+
+    flex: 1;
+
+    @include respond(tab-port){
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+    }
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+  }
+
+  &__para{
+    margin-top: 2rem;
+    @include respond(phone-sm){
+      max-width: 35rem;
+    }
+  }
+}
+
+.flex-reverse{
+   flex-direction: row-reverse;
+   @include respond(tab-port){
+     flex-direction: column-reverse;
+   }
+}
+
+//Call to Action Section
+.cta{
+  margin: 5rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // gap: 3.5rem;
+  text-align: center;
+
+  & > :not(:last-child){
+    margin-bottom: 3.5rem;
+  }
+
+  @include respond(phone-sm){
+    max-width: 60rem;
+
+  }
+}
+
+//Footer Section
+.footer{
+  margin-bottom: 0;
+  &::before{
+    content: "";
+    display: block;
+    background-image: url('../images/bg-footer-top-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 158px;
+    transform: translateY(10px); //push the curve down 10px cuz a blank line seems to be appearing when displaying in desktop mode on my mobile.
+    @include respond(phone-sm){
+      background-image: url('../images/bg-footer-top-mobile.svg');
+      height: 53px;
+    }
+  }
+
+  &__container{
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    // gap: 7rem;
+    flex-wrap: wrap;
+    padding: 11rem;
+    & > :not(:last-child){
+      margin-bottom: 7rem;
+    }
+    & > :nth-child(3n){
+      width: 100%;
+    }
+
+    @include respond(phone-lg){
+      flex-direction: column;
+    }
+  }
+
+
+  &__info{
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    & >:not(:last-child){
+      margin-bottom: 2.5rem;
+    }
+
+    &__para{
+     //padding-right: 33%;
+      width: 30rem;
+    }
+
+    &__directory{
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-gap: 2rem;
+    }
+  }
+
+  &__logo{
+    display: block;
+    filter: brightness(0) invert(1);
+
+    @include respond(tab-land){
+      width: 50%;
+    }
+  }
+
+
+  &__newsletter{
+    flex: 0 0 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // gap: 1.5rem;
+
+    @include respond(phone-lg){
+      order: -1;
+    }
+
+    & >:not(:last-child){
+      margin-bottom: 2rem;
+    }
+
+    &__para{
+      padding-right: 35%;
+      @include respond(tab-port){
+        padding: 0;
+      }
+    }
+  }
+
+  &__form{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // gap: 4rem;
+
+    @include respond(tab-port){
+      flex-direction: column;
+
+      & > :not(:last-child){
+        margin-bottom: 2rem;
+      }
+    };
+    & >:last-child{
+      margin-left: 4rem;
+    }
+
+    #user-email{
+     flex: 1;
+     border: 0;
+     outline: 0;
+     border-radius: .4rem;
+     padding: 1rem;
+     color: gray;
+    }
+
+    .btn-subscribe{
+      align-self: flex-end;
+    }
+  }
+
+  &__social-icons{
+    display: flex;
+
+    & >:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+}
+
+//Attribution
+.attribution{
+  color: var(--color-neutral-light);
+  flex: 1;
+  text-align: center;
+}
