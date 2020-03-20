@@ -228,6 +228,7 @@
 
     @include respond(phone-lg){
       flex-direction: column;
+      padding: 5rem;
     }
   }
 
