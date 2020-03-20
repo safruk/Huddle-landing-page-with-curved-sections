@@ -157,6 +157,7 @@ body {
   transform: translateY(-1px); }
 
 .btn-nav, .btn-nav:link, .btn-nav:visited {
+  font-family: 'Poppins',sans-serif;
   background-color: #fff;
   color: var(--color-primary);
   border-color: var(--color-primary);
