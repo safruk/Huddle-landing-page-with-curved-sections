@@ -24,6 +24,10 @@ body{
 .primary-heading{
   color: var(--color-neutral-dark);
   font-size: 4.5rem;
+
+  @include respond(tab-port){
+    font-size: 3.8rem;
+  }
 }
 
 
@@ -42,6 +46,10 @@ body{
 //feature and cta
 .secondary-heading{
   font-size: 3.77rem;
+
+  @include respond(tab-port){
+    font-size: 3.33rem;
+  }
 }
 .feature__para{
   font-family: inherit;
@@ -59,13 +67,17 @@ body{
 .footer__para{
   font-family: inherit;
   font-weight: inherit;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: inherit;
 }
 .footer__info__para,
 .footer__newsletter__para{
   font-family: inherit;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: inherit;
+
+  @include respond(phone-lg){
+    font-weight: 600;
+  }
 }

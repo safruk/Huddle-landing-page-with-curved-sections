@@ -48,6 +48,9 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 37.5em) {
     html {
+      font-size: 43.75%; } }
+  @media only screen and (max-width: 18.75em) {
+    html {
       font-size: 37.5%; } }
   @media only screen and (min-width: 112.5em) {
     html {
@@ -90,6 +93,9 @@ body {
 .primary-heading {
   color: var(--color-neutral-dark);
   font-size: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .primary-heading {
+      font-size: 3.8rem; } }
 
 .stat__para {
   color: darkgrey;
@@ -102,6 +108,9 @@ body {
 
 .secondary-heading {
   font-size: 3.77rem; }
+  @media only screen and (max-width: 56.25em) {
+    .secondary-heading {
+      font-size: 3.33rem; } }
 
 .feature__para {
   font-family: inherit;
@@ -117,15 +126,19 @@ body {
 .footer__para {
   font-family: inherit;
   font-weight: inherit;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: inherit; }
 
 .footer__info__para,
 .footer__newsletter__para {
   font-family: inherit;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: inherit; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__info__para,
+    .footer__newsletter__para {
+      font-weight: 600; } }
 
 .btn, .btn:link, .btn:visited {
   height: 4rem;
@@ -158,6 +171,7 @@ body {
 
 .btn-nav, .btn-nav:link, .btn-nav:visited {
   font-family: 'Poppins',sans-serif;
+  font-weight: 400;
   background-color: #fff;
   color: var(--color-primary);
   border-color: var(--color-primary);
@@ -170,11 +184,18 @@ body {
   font-weight: 700;
   border-radius: 10rem;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 37.5em) {
+    .btn-cta, .btn-cta:link, .btn-cta:visited {
+      min-width: 30rem;
+      height: 6rem; } }
 
 .btn-subscribe, .btn-subscribe:link, .btn-subscribe:visited {
   height: 4.8rem;
   border-radius: .5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 23.5em) {
+    .btn-subscribe, .btn-subscribe:link, .btn-subscribe:visited {
+      width: 50%; } }
 
 .nav {
   width: 90%;
@@ -208,7 +229,7 @@ body {
         width: 80%; } }
   @media only screen and (max-width: 56.25em) {
     .header {
-      max-width: 60rem; } }
+      max-width: 45rem; } }
   .header > :not(:last-child) {
     margin: 1.25rem 0; }
   .header > :nth-child(3n) {
@@ -326,7 +347,7 @@ body {
       .feature__content {
         align-items: center;
         justify-content: center;
-        padding: 3rem; } }
+        padding: 2rem; } }
   .feature__img {
     display: block;
     width: 100%; }
@@ -382,12 +403,15 @@ body {
       margin-bottom: 7rem; }
     .footer__container > :nth-child(3n) {
       width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__container {
+        padding: 5rem; } }
     @media only screen and (max-width: 37.5em) {
       .footer__container {
-        flex-direction: column;
-        padding: 5rem; } }
+        flex-direction: column; } }
   .footer__info {
     flex: 0 0 50%;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -395,7 +419,7 @@ body {
     .footer__info > :not(:last-child) {
       margin-bottom: 2.5rem; }
     .footer__info__para {
-      width: 30rem; }
+      max-width: 32rem; }
     .footer__info__directory {
       display: grid;
       grid-template-columns: min-content 1fr;
@@ -418,10 +442,11 @@ body {
     .footer__newsletter > :not(:last-child) {
       margin-bottom: 2rem; }
     .footer__newsletter__para {
-      padding-right: 35%; }
+      width: 85%; }
       @media only screen and (max-width: 56.25em) {
         .footer__newsletter__para {
-          padding: 0; } }
+          padding: 0;
+          width: 100%; } }
   .footer__form {
     margin-top: 2rem;
     width: 100%;
